@@ -30,20 +30,18 @@ class MainActivity : AppCompatActivity() {
         val hintPassword: TextView = findViewById(R.id.hint_password)
         val submitButton: Button = findViewById(R.id.button_submit)
 
-        val clickListener = object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                var success = true;
+        val clickListener = View.OnClickListener {
+            var success = true;
 
-                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(userInput.text).matches()) {
-                    hintUser.visibility = View.VISIBLE
-                    success = false
-                }
-                if (!isValidPassword(passwordInput.text)) {
-                    hintPassword.visibility = View.VISIBLE
-                    success = false
-                }
-                if (success) hintSuccess.visibility = View.VISIBLE
+            if (!android.util.Patterns.EMAIL_ADDRESS.matcher(userInput.text).matches()) {
+                hintUser.visibility = View.VISIBLE
+                success = false
             }
+            if (!isValidPassword(passwordInput.text)) {
+                hintPassword.visibility = View.VISIBLE
+                success = false
+            }
+            if (success) hintSuccess.visibility = View.VISIBLE
         }
         submitButton.setOnClickListener(clickListener)
     }
