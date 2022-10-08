@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">LoginApp</string>
     <string name="label_user">Usuario</string>
+    <string name="hint_user">Correo electrónico inválido, por favor verificar.</string>
     <string name="label_password">Password</string>
+    <string name="hint_password">Contraseña inválido, por favor verificar</string>
+    <string name="hint_success">Bienvenido!! Credenciales correctas...</string>
     <string name="button_sing_in">Iniciar Sesión</string>
 </resources>

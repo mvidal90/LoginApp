@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_image"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -12,40 +13,63 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="16dp"
+        android:background="@color/white_transparent"
+        android:radius="12dp"
+        android:layout_margin="16dp"
         app:layout_constraintBottom_toTopOf="@+id/button_submit"
         app:layout_constraintEnd_toEndOf="@+id/button_submit"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/label_user"
+            android:id="@+id/hint_success"
+            android:text="@string/hint_success"
+            android:visibility="invisible"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/label_user"
             android:textSize="20dp"
-            android:layout_margin="8dp"/>
+            android:textColor="@color/success"/>
+        <TextView
+            android:id="@+id/label_user"
+            android:text="@string/label_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"/>
         <EditText
             android:id="@+id/input_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:textSize="24dp"
-            android:padding="8dp"
-            android:layout_margin="8dp"/>
+            android:inputType="textEmailAddress"
+            android:textSize="20dp"
+            android:padding="8dp"/>
+        <TextView
+            android:id="@+id/hint_user"
+            android:text="@string/hint_user"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/error"/>
         <TextView
             android:id="@+id/label_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:layout_margin="8dp"
-            android:text="@string/label_password" />
+            android:textSize="16dp"
+            android:text="@string/label_password"/>
         <EditText
             android:id="@+id/input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:textSize="24dp"
-            android:padding="8dp"
-            android:layout_margin="8dp"/>
+            android:inputType="textPassword"
+            android:textSize="20dp"
+            android:padding="8dp"/>
+        <TextView
+            android:id="@+id/hint_password"
+            android:text="@string/hint_password"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:textColor="@color/error"/>
     </LinearLayout>
 
     <Button
